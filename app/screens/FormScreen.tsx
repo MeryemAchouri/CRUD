@@ -114,7 +114,7 @@ const FormScreen = () => {
           <View key={index} style={styles.userRow}>
             <View style={styles.userInfo}>
               <Text style={styles.text}>
-                {user.id} {user.name}
+              {user.name}
               </Text>
               <Text style={styles.text}>{user.email}</Text>
             </View>

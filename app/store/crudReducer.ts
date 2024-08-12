@@ -1,5 +1,4 @@
 import { createSlice, PayloadAction } from "@reduxjs/toolkit";
-import { Alert } from "react-native";
 
 export interface User {
   id: string;
