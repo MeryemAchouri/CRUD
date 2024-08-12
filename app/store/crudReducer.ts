@@ -1,6 +1,6 @@
 import { createSlice, PayloadAction } from "@reduxjs/toolkit";
+import { Alert } from "react-native";
 
-// Define the type for the user
 export interface User {
   id: string;
   name: string;
@@ -12,10 +12,7 @@ export interface UserState {
 }
 
 const initialState: UserState = {
-  users: [
-    { id: '1', name: 'Mohammed Allaoui', email: 'mohammed@gmail.com' },
-    { id: '2', name: 'Meryem Achouri', email: 'meryem@gmail.com' },
-  ],
+  users: []
 };
 
 const crudSlice = createSlice({
@@ -23,6 +20,7 @@ const crudSlice = createSlice({
   initialState,
   reducers: {
     addUser: (state: UserState, action: PayloadAction<User>) => {
+      
       state.users.push(action.payload);
     },
     updateUser: (state: UserState, action: PayloadAction<User>) => {
